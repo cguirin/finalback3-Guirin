@@ -1,26 +1,25 @@
-# Proyecto de Backend para Adopciones con MongoDB
+# Backend de Adopciones
 
-Este proyecto proporciona una API para gestionar un sistema de adopciones utilizando **MongoDB** como base de datos. La aplicación está diseñada para ser utilizada en un entorno de contenedores **Docker** para facilitar su despliegue.
+Este proyecto implementa un **backend para un sistema de adopciones** utilizando **MongoDB** como base de datos. Permite gestionar usuarios, mascotas y procesos de adopción a través de una API RESTful, facilitando la interacción entre las partes involucradas en el proceso de adopción.
 
-## Descripción
+## Tecnologías
 
-La API permite realizar operaciones básicas de CRUD (crear, leer, actualizar y eliminar) sobre registros de adopciones de animales. Los datos se almacenan en MongoDB y el backend está construido en un framework adecuado como **Node.js** con **Express**.
+- **Node.js** con **Express** para la creación de la API.
+- **MongoDB** como base de datos NoSQL.
+- **Mongoose** para interactuar con MongoDB desde Node.js.
+- **Docker** para contenerizar la aplicación y facilitar su despliegue.
 
-## Docker
+## Funcionalidades
 
-El contenedor Docker para este proyecto está disponible en [DockerHub](https://hub.docker.com/repository/docker/octavio445/adoption/general). Puedes utilizar este contenedor para ejecutar el backend de forma rápida y sencilla.
+- **Gestión de Usuarios**: Crear, obtener, actualizar y eliminar usuarios.
+- **Gestión de Mascotas**: Crear, obtener, actualizar y eliminar mascotas disponibles para adopción.
+- **Proceso de Adopción**: Realizar el proceso de adopción y almacenar la información relevante.
 
-## Tecnologías Usadas
+## Uso con Docker
 
-- **Node.js** - Backend en JavaScript
-- **Express** - Framework para la API
-- **MongoDB** - Base de datos NoSQL
-- **Docker** - Contenerización y despliegue
+Este proyecto está disponible como una imagen de Docker, lo que facilita su despliegue y ejecución.
 
-## Requisitos Previos
+1. **Descargar la imagen de Docker**: [Docker Hub - carla484/adoption](https://hub.docker.com/r/carla484/adoption)
 
-1. **Docker** instalado en tu máquina. Puedes seguir los pasos en la [documentación oficial de Docker](https://docs.docker.com/get-docker/) para instalarlo.
-2. **MongoDB** - La base de datos se puede ejecutar también dentro de un contenedor Docker si no deseas instalar MongoDB localmente.
-
-
-
+```bash
+docker pull carla484/adoption:general

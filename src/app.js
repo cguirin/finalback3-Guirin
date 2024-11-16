@@ -13,11 +13,11 @@ import index from './routes/index.routes.js';
 
 const app = express();
 
-// Middlewares de procesamiento de datos
+// Middlewares 
 app.use(express.json());  
 app.use(express.urlencoded({ extended: true }));  
 
-// Middleware de sesión
+
 app.use(
   session({
     secret: envsConfig.SECRET_CODE_SESSION, 
@@ -26,15 +26,15 @@ app.use(
   })
 );
 
-// Middleware de cookies
+
 app.use(cookieParser());  
 
-// Middleware de autenticación y Passport
+
 initializePassport();  
 passport.use(passport.initialize());  
 passport.use(passport.session());  
 
-// Middleware de documentación Swagger
+
 app.use('/api-docs', swaggerUiExpress.serve, swaggerUiExpress.setup(specs)); 
 
 // Conexión a la base de datos MongoDB

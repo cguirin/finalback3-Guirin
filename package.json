@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "nodemon src/app.js",
     "test": "mocha 'test/**/adoption.test.js'",
-    "test1": "mocha 'test/**/pet.test.js'",
-    "test2": "mocha 'test/**/user.test.js'"
+    "test-1": "mocha 'test/**/pet.test.js'",
+    "test-2": "mocha 'test/**/user.test.js'"
     
   },
   "keywords": [],

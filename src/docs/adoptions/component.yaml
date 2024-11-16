@@ -14,9 +14,9 @@ components:
             type: ObjectId
             description: Pet ID
       example:
-        _id: "6737c5f5cf46a8a4e2381f08"
-        owner: "670eab67ae2784760704dbde"
-        pet: "6736f4847bfcf61de4610350"
+        _id: "6736cd8750ad9efcff10bd8b"
+        owner: "6736cd8750ad9efcff10bd81" 
+        pet: "6736cd8750ad9efcff10bd85"
   requestBody:
     createAdoption:
       type: object
