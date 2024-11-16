@@ -8,8 +8,8 @@ describe('Session Integration Test', () => {
   const uniqueEmail = `randomemail${Date.now()}@gmail.com`;
   it('[POST] /api/sessions/register - Register an User', async () => {
     const newUser = {
-      first_name: 'Ogogog',
-      last_name: 'Pesutti',
+      first_name: 'Carla',
+      last_name: 'Guirin',
       email: uniqueEmail,
       password: '123',
     };

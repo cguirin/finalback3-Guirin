@@ -32,7 +32,7 @@ describe('Test Adoption', () => {
   it('Create Adoption', async () => {
    
     const user = await userRepository.getByParam({
-      email: 'Alfredo.OlivaresOlivas45@yahoo.com',
+      email: 'Veronica89@gmail.com',
     });
 
     if (!user) {
@@ -41,7 +41,7 @@ describe('Test Adoption', () => {
 
     // Obtener la mascota por ID
     const pet = await petsRepository.getByParam({
-      _id: '670eab67ae2784760704dbe6',
+      _id: '670ead5514de2924e303f38f',
     });
 
     if (!pet) {

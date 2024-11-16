@@ -13,32 +13,32 @@ describe('Pet Integration Test', () => {
 
   it('[POST] /api/pets - Create a new Pet', async () => {
     const newPet = {
-      name: 'Onomatopeya',
-      specie: 'Gato',
-      birthDate: '10/10/2023',
-      image: 'uiiai',
+      name: 'Lilia',
+      specie: 'snake',
+      birthDate: '15/02/2024',
+      image: 'https://avatars.githubusercontent.com/u/15501910',
     };
     const { status, body } = await request.post('/').send(newPet);
     testPet = body.payload;
     expect(status).to.be.equal(201);
     expect(body.payload).to.have.property('_id');
     expect(body.payload).to.be.an('object');
-    expect(body.payload.name).to.be.equal('Onomatopeya');
-    expect(body.payload.specie).to.be.equal('Gato');
+    expect(body.payload.name).to.be.equal('Lilia');
+    expect(body.payload.specie).to.be.equal('snake');
     expect(body.payload.adopted).to.be.equal(false);
   });
 
   it('[PUT] /api/pets/:pid - Update a Pet', async () => {
     const newPet = {
-      specie: 'Perro',
+      specie: 'snake',
     };
 
     const { status, body } = await request.put(`/${testPet._id}`).send(newPet);
 
     expect(status).to.be.equal(200);
     expect(body.payload).to.be.an('object');
-    expect(body.payload.name).to.be.equal('Onomatopeya');
-    expect(body.payload.specie).to.be.equal('Perro');
+    expect(body.payload.name).to.be.equal('Lilia');
+    expect(body.payload.specie).to.be.equal('snake');
     expect(body.payload.adopted).to.be.equal(false);
   });
 

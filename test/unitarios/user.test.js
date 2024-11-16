@@ -28,10 +28,10 @@ describe('Test User', () => {
 
   it('Create and return New User', async () => {
     const newUser = {
-      first_name: 'Romancito',
-      last_name: 'Gomez',
-      email: 'atyiar5121o1@gmail.com',
-      password: '123',
+      first_name: 'Teresa',
+      last_name: 'Guzmán Araña',
+      email: 'Cesar.ArmasYanes69@hotmail.com',
+      password: '$2b$10$FQPq3qerPCORUmLUlQiLYuxvoB8JZeC0xuJ7eqojLbbrdcbWs3/dW',
       age: 20,
       birthDate: new Date(),
     };
@@ -67,8 +67,8 @@ describe('Test User', () => {
 
   it('Update an User', async () => {
     const updateData = {
-      first_name: 'Juan',
-      password: '321',
+      first_name: 'Teresa',
+      password: '187',
     };
 
     const user = await userRepository.update(userTest._id, updateData);
